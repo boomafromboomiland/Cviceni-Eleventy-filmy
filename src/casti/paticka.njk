@@ -13,7 +13,7 @@
     <h2 class="paticka_h2">Obecné</h2>
         <ul class="paticka_zoznam">
             <li class="paticka_li"><a class="paticka_href" href="/puvod-dat/">Původ dat</a></li>
-        {% for paticka in obecne %}
+        {% for paticka in obecneinfo %}
             <li class="paticka_li"><a class="paticka_href" href="{{ paticka.adresa | slug }}">{{ paticka.nazev }}</a></li>
         {% endfor %}
         </ul>

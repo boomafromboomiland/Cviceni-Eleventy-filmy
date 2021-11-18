@@ -1,0 +1,21 @@
+h1 {
+    margin-left: 170px;
+}
+
+.list {
+    max-width: 52rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.filmy {
+    list-style-type: square;
+    color: #425beb;
+    margin-left: 150px;
+}
+
+.filmy__li {
+    padding: 0.2em 0;
+    line-height: 1.1;
+}

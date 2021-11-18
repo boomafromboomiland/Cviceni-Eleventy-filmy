@@ -20,9 +20,9 @@ permalink: "/film/{{ film.nazev | slug }}/"
 <div class="hodnoceni hodnoceni--skore-5">Hodnocení: {{ film.hodnoceni }}</div>
 <h3>Související filmy</h3>
 <ul>
-  <li class="seznam__polozka">
-	  <a class="seznam__odkaz" href="/film/{{ film.obsah.autor.odkaz }}">{{ film.souvisejici }}</a>
-  </li>
+  {% for film in filmy.souvisejici %}
+		<li class="filmy__li"><a href="/film/{{ film.nazev | slug }}">{{ film.souvisejici.nazev }}</a></li>
+	{% endfor %}
 </ul>
 </aside>
 
