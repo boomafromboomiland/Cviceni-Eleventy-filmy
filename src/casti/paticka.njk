@@ -1,0 +1,23 @@
+<footer class="paticka">
+<div class="paticka__obsah">
+	<div class="paticka_casti">
+    <section class="paticka_stlpce">
+    <h2 class="paticka_h2">Podobné weby</h2>
+        <ul class="paticka_zoznam">
+        {% for paticka in podobneWeby %}
+            <li class="paticka_li"><a class="paticka_href" href="{{ paticka.adresa | slug }}">{{ paticka.nazev }}</a></li>
+        {% endfor %}
+        </ul>
+    </section>
+    <section class="paticka_stlpce">
+    <h2 class="paticka_h2">Obecné</h2>
+        <ul class="paticka_zoznam">
+            <li class="paticka_li"><a class="paticka_href" href="/puvod-dat/">Původ dat</a></li>
+        {% for paticka in obecne %}
+            <li class="paticka_li"><a class="paticka_href" href="{{ paticka.adresa | slug }}">{{ paticka.nazev }}</a></li>
+        {% endfor %}
+        </ul>
+    </section>
+    </div>
+</div>
+</footer>
