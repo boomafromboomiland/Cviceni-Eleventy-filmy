@@ -1,21 +1,24 @@
-h1 {
+.hlavni-nadpis {
     margin-left: 170px;
 }
 
-.list {
+/*.list {
     max-width: 52rem;
     width: 100%;
     margin: 0 auto;
     padding: 2rem 1rem;
-}
+}*/
 
-.filmy {
+.zoznam {
     list-style-type: square;
     color: #425beb;
     margin-left: 150px;
+    max-width: 52rem;
+    width: 100%;
+    padding: 2rem 1rem;
 }
 
-.filmy__li {
+.zoznam__polozka {
     padding: 0.2em 0;
     line-height: 1.1;
 }

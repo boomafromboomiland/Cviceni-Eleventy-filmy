@@ -6,23 +6,32 @@ pagination:
   alias: film
 permalink: "/film/{{ film.nazev | slug }}/"
 ---
-
-<h2>{{ film.nazev }}</h2>
-<dl>Rok: {{ film.rok }}</dl>
-<dl>Žánr: {{ film.zanr }} {{ zanry | join }}</dl>
-<dl>Délka: {{ film.delka }}minut</dl>
-<h3>Obsah</h3>
-<p>{{ film.obsah.text }}<a class="autor__odkaz" href="{{ film.obsah.autor.odkaz }}">{{ film.obsah.autor.jmeno }}</a></p>
-<aside>
-<div class="plakat">
-<img class="detail__plakat" src="{{ film.plakat.url }}" width="720" vyska="1066" alt="plakát">
-</div>
-<div class="hodnoceni hodnoceni--skore-5">Hodnocení: {{ film.hodnoceni }}</div>
-<h3>Související filmy</h3>
-<ul>
-  {% for film in filmy.souvisejici %}
-		<li class="filmy__li"><a href="/film/{{ film.nazev | slug }}">{{ film.souvisejici.nazev }}</a></li>
+<div class="layout_telo">
+<div class="detail">
+<main class="detail__hlavni">
+<h2 class="hlavni-nadpis">{{ film.nazev }}</h2>
+<dl class="detail__podrobnosti">
+<dt class="detail__popisek">Rok:</dt>
+<dd> {{ film.rok }}</dd>
+<dt class="detail__popisek">Žánr:</dt>
+<dd> {{ film.zanr }} {{ zanry | join }}</dd>
+<dt class="detail__popisek">Délka:</dt>
+<dd> {{ film.delka }}minut</dd>
+</dl>
+<h3 class="podnadpis">Obsah</h3>
+<p class="detail__obsah">{{ film.obsah.text }}<span class="autor">(<a class="autor__odkaz" href="{{ film.obsah.autor.odkaz }}">{{ film.obsah.autor.jmeno }}</a>)</span></p>
+</main>
+<aside class="detail__vedlejsi">
+<img class="detail__plakat" src="{{ film.plakat.url }}" width="{{ film.plakat.sirky }}" vyska="{{ film.plakat.vyska }}" alt="plakát">
+<h3 class="podnadpis">Hodnocení: {{ film.hodnoceni }}</h3>
+<div class="hodnoceni hodnoceni--skore__{{ hodnoceni }}"></div>
+<h3 class="podnadpis">Související filmy</h3>
+<ul class="zoznam">
+	{% for souvisejiciFilm in film.souvisejici %}
+		<li class="zoznam__polozka"><a href="/film/{{ souvisejiciFilm.nazev | slug }}">{{ souvisejiciFilm.nazev }}</a></li>
 	{% endfor %}
 </ul>
+</ul>
 </aside>
-
+</div>
+</div>
