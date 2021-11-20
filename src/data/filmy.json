@@ -21,7 +21,7 @@
 		}
 	},
 	{
-		"nazev": "Ajťáci - Přichází internet",
+		"nazev": "Ajťáci: Přichází internet",
 		"rok": 2013,
 		"zanr": ["Komedie"],
 		"zeme": ["Velká Británie"],
@@ -98,7 +98,7 @@
 		"hodnoceni": 4,
 		"souvisejici": [
 			{ "nazev": "Pelíšky" },
-			{ "nazev": "Ajťáci - Přichází internet" }
+			{ "nazev": "Ajťáci: Přichází internet" }
 		],
 		"plakat": {
 			"url": "https://image.pmgstatic.com/cache/resized/w720/files/images/film/posters/163/781/163781903_f1e217.png",
@@ -128,7 +128,7 @@
 		}
 	},
 	{
-		"nazev": "Pat a Mat - Fax",
+		"nazev": "Pat a Mat: Fax",
 		"rok": 2003,
 		"zanr": ["Animovaný", "Krátkometrážní", "Rodinný"],
 		"zeme": ["Česko"],
@@ -394,6 +394,27 @@
 		"souvisejici": [{ "nazev": "Pelíšky" }],
 		"plakat": {
 			"url": "https://image.pmgstatic.com/cache/resized/w360/files/images/film/posters/158/181/158181512_46eb07.jpg",
+			"sirka": 360,
+			"vyska": 504
+		}
+	}, 
+	{
+		"nazev": "Red Notice",
+		"rok": 2021,
+		"zanr": ["Komedie", "Krimi", "Thriller"],
+		"zeme": ["USA"],
+		"delka": 117,
+		"obsah": {
+			"text": "Odvážná loupež svede dohromady nejlepšího experta FBI na chování zločinců (Dwayne Johnson) a dva znepřátelené gangstery (Gal Gadot a Ryan Reynolds). Tady půjde do tuhého.",
+			"autor": {
+				"jmeno": "Netflix",
+				"odkaz": "https://www.netflix.com"
+			}
+		},
+		"hodnoceni": 3,
+		"souvisejici": [{ "nazev": "Kde se země chvěje" }, { "nazev": "Vlastníci" }],
+		"plakat": {
+			"url": "https://image.pmgstatic.com/files/images/film/photos/159/886/159886962_f82293.jpg?w370h370",
 			"sirka": 360,
 			"vyska": 504
 		}

@@ -1,24 +1,30 @@
-.hlavni-nadpis {
-    margin-left: 170px;
-}
+.filmy-zoznam {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 
-/*.list {
-    max-width: 52rem;
-    width: 100%;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}*/
+    &__odkaz {
+        text-decoration: none;
+        color: $doplnkova-barva;
+    }
 
-.zoznam {
-    list-style-type: square;
-    color: #425beb;
-    margin-left: 150px;
-    max-width: 52rem;
-    width: 100%;
-    padding: 2rem 1rem;
-}
+    &__odkaz::before {
+        content: "";
+        background-color:$doplnkova-barva;
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.1rem;
+    }
 
-.zoznam__polozka {
-    padding: 0.2em 0;
-    line-height: 1.1;
+    &__odkaz:hover, 
+    &__odkaz:focus {
+        text-decoration: underline;
+    } 
+
+    &__polozka {
+        line-height: 1.2rem;
+        padding: 0.2rem 0;
+    }
 }

@@ -1,0 +1,28 @@
+.detail__podrobnosti {
+    margin: 0 0 1.8rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.2rem 0.6rem;
+    }
+
+.detail__podrobnosti dd{
+    margin: 0;
+    }
+
+.detail__popisok {
+    font-weight: 700;
+    }
+
+.plakat {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    }
+
+@media screen and (min-width:530px) {
+    .detail {
+        display: grid;
+        grid-template-columns: 1fr 13rem;
+        gap: 2rem;
+    }
+}

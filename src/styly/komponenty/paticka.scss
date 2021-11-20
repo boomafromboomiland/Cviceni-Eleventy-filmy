@@ -1,41 +1,46 @@
 .paticka {
     background-color: #fafafa;
-    padding: 1rem 0;
+    padding:$mezera-od-okraju 0;
+
+    &__nadpis {
+        font-size: 1.2rem;
+        margin: 0;
+        color: #303030;
+    }
+
+    &__zoznam {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__polozka {
+        line-height: 1.2rem;
+        padding: 0.2rem 0;
+    }
+
+    &__odkaz {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__odkaz:hover, 
+    &__odkaz:focus {
+        text-decoration: underline;
+    } 
+
+    &__obsah {
+		max-width: $sirka-obsahu;
+		width: 100%;
+		margin: 0 auto;
+		padding: $mezera-od-okraju;
+	}
 }
 
-.paticka_obsah {
-    max-width: 52rem;
-    width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-.paticka_li {
-    list-style: none;
-    margin-left: 170px;
-}
-
-.paticka_href {
-    text-decoration: none; 
-    color: #444444;
-}
-
-.paticka_casti {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    gap: 1rem;
-    
-}
-
-.paticka_h2 {
-    color: #303030;
-    font-size: 1em;
-    margin-left: 170px;
-    word-wrap: normal;
-}
-
-.paticka_zoznam {
-    margin: 0.5em 0 0;
-    padding: 0;
-    list-style-type: none;
+@media screen and (min-width:530px) {
+    .paticka__obsah--casti {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        gap:1rem;
+    }
 }

@@ -1,0 +1,39 @@
+.hvezdy {
+    --skore:0;
+    width: 7.5rem;
+    height: 1.5rem;
+    display: flex;
+}
+
+.hvezdy-skore__1 {
+    --skore:1;
+}
+
+.hvezdy-skore__2 {
+    --skore:2;
+}
+
+.hvezdy-skore__3 {
+    --skore:3;
+}
+
+.hvezdy-skore__4 {
+    --skore:4;
+}
+
+.hvezdy-skore__5 {
+    --skore:5;
+}
+
+.hvezdy::before, 
+.hvezdy::after {
+    content: "";
+    background-image: url("/obrazky/hvezda-vyplnena.svg");
+    background-size: contain;
+    flex-grow: var(--skore);
+}
+
+.hvezdy::after {
+    background-image: url("/obrazky/hvezda-prazdna.svg");
+    flex-grow: calc(5 - var(--skore));
+}

@@ -1,0 +1,37 @@
+.telo {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.hlavni-nadpis {
+    font-size: 2rem;
+    margin-bottom: 0.5rem 0;
+}
+
+.autor {
+    font-style: italic;
+}
+
+.autor__odkaz {
+    font-style: italic;
+    text-decoration: none;
+    color:#3d5afe;
+
+
+&__:hover, 
+&__:focus {
+    text-decoration: underline;
+    } 
+}
+
+.layout_telo {
+    max-width: $sirka-obsahu;
+	width: 100%;
+	margin: 0 auto;
+    padding: $mezera-od-okraju;
+}
+
+.podnadpis {
+    font-size: 1.6rem;
+    margin: 0.9rem 0;
+}
