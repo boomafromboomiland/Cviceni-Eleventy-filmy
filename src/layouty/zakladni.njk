@@ -7,10 +7,14 @@
         <link rel="stylesheet" href="/index.css">
 		<link rel="shortcut icon" href="/obrazky/favicon.svg">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 	</head>
-	{% include "hlavicka.njk" %}
-    <body>{{ content | safe }}</body>
-	{% include "paticka.njk" %}
+	<body>
+		<div class="telo">
+			{% include "hlavicka.njk" %}
+   	 			{{ content | safe }}
+			{% include "paticka.njk" %}
+		</div>
+	</body>
 </html>

@@ -11,11 +11,11 @@ permalink: "/film/{{ film.nazev | slug }}/"
 <main class="detail__hlavni">
 <h2 class="hlavni-nadpis">{{ film.nazev }}</h2>
 <dl class="detail__podrobnosti">
-<dt class="detail__popisek">Rok:</dt>
+<dt class="detail__popisok">Rok:</dt>
 <dd> {{ film.rok }}</dd>
-<dt class="detail__popisek">Žánr:</dt>
+<dt class="detail__popisok">Žánr:</dt>
 <dd> {{ film.zanr }} {{ zanry | join }}</dd>
-<dt class="detail__popisek">Délka:</dt>
+<dt class="detail__popisok">Délka:</dt>
 <dd> {{ film.delka }}minut</dd>
 </dl>
 <h3 class="podnadpis">Obsah</h3>
@@ -23,15 +23,18 @@ permalink: "/film/{{ film.nazev | slug }}/"
 </main>
 <aside class="detail__vedlejsi">
 <img class="detail__plakat" src="{{ film.plakat.url }}" width="{{ film.plakat.sirky }}" vyska="{{ film.plakat.vyska }}" alt="plakát">
-<h3 class="podnadpis">Hodnocení: {{ film.hodnoceni }}</h3>
-<div class="hodnoceni hodnoceni--skore__{{ hodnoceni }}"></div>
+<h3 class="podnadpis">Hodnocení</h3>
+<div class="hvezdy hvezdy-skore__{{ film.hodnoceni }}">
+</div>
+{% if film.souvisejici | length > 0 %}
 <h3 class="podnadpis">Související filmy</h3>
 <ul class="zoznam">
-	{% for souvisejiciFilm in film.souvisejici %}
-		<li class="zoznam__polozka"><a href="/film/{{ souvisejiciFilm.nazev | slug }}">{{ souvisejiciFilm.nazev }}</a></li>
-	{% endfor %}
+  {% for souvisejiciFilm in film.souvisejici %}
+    <li class="zoznam__polozka"><a class="zoznam__polozka__odkaz" href="/film/{{ souvisejiciFilm.nazev | slug }}">{{  souvisejiciFilm.nazev }}</a></li>
+  {% endfor %}
 </ul>
-</ul>
+{% endif %}
 </aside>
 </div>
 </div>
+
