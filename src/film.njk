@@ -9,7 +9,7 @@ permalink: "/film/{{ film.nazev | slug }}/"
 <div class="layout_telo">
   <div class="detail">
     <main class="detail__hlavni">
-      <h2 class="hlavni-nadpis">{{ film.nazev }}</h2>
+      <h2 class="hlavni-nadpis__film">{{ film.nazev }}</h2>
         <dl class="detail__podrobnosti">
           <dt class="detail__popisok">Rok:</dt>
           <dd> {{ film.rok }}</dd>
@@ -29,7 +29,7 @@ permalink: "/film/{{ film.nazev | slug }}/"
       {% endif %}</p>
     </main>
     <aside class="detail__vedlejsi">
-      <img class="plakat" src="{{ film.plakat.url }}" width="{{ film.plakat.sirky }}" vyska="{{ film.plakat.vyska }}" alt="plakát">
+      <img class="detail__plakat" src="{{ film.plakat.url }}" width="{{ film.plakat.sirky }}" vyska="{{ film.plakat.vyska }}" alt="plakát">
       <h3 class="podnadpis">Hodnocení</h3>
       <div class="hvezdy hvezdy-skore__{{ film.hodnoceni }}">
       </div>
