@@ -1,9 +1,15 @@
+.telo {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 .layout_telo {
     display: grid;
     grid-template-rows: auto 1fr auto;
     max-width: $sirka-obsahu;
 	width: 100%;
     padding: $mezera-od-okraju;
+    justify-items: center;
 }
 
 .hlavni-nadpis {
