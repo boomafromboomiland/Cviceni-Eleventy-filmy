@@ -14,9 +14,9 @@ permalink: "/film/{{ film.nazev | slug }}/"
           <dt class="detail__popisok">Rok:</dt>
           <dd> {{ film.rok }}</dd>
           <dt class="film-detail__popisek">Země:</dt>
-          <dd>{{ film.zeme | join (', ') }}</dd>
+          <dd>{{ film.zeme }}</dd>
           <dt class="detail__popisok">Žánr:</dt>
-          <dd> {{ film.zanr }} {{ zanry | join }}</dd>
+          <dd> {{ film.zanr }} {{ zanr | join }}</dd>
           <dt class="detail__popisok">Délka:</dt>
           <dd> {{ film.delka }}minut</dd>
         </dl>
