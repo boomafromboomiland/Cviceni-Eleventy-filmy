@@ -29,7 +29,7 @@ permalink: "/film/{{ film.nazev | slug }}/"
       {% endif %}</p>
     </main>
     <aside class="detail__vedlejsi">
-      <img class="detail__plakat" src="{{ film.plakat.url }}" width="{{ film.plakat.sirky }}" vyska="{{ film.plakat.vyska }}" alt="plakát">
+      <img class="plakat" src="{{ film.plakat.url }}" width="{{ film.plakat.sirky }}" vyska="{{ film.plakat.vyska }}" alt="plakát">
       <h3 class="podnadpis">Hodnocení</h3>
       <div class="hvezdy hvezdy-skore__{{ film.hodnoceni }}">
       </div>

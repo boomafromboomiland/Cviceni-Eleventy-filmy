@@ -13,14 +13,14 @@
     font-weight: 700;
     }
 
-.detail__plakat {
+.plakat {
     width: 100%;
     height: auto;
     max-width: 100%;
     }
 
 @media screen and (min-width:530px) {
-    .detail__plakat {
+    .plakat {
         display: grid;
         grid-template-columns: 1fr 13rem;
         gap: 2rem;
