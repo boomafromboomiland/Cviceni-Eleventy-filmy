@@ -13,7 +13,7 @@ permalink: "/film/{{ film.nazev | slug }}/"
         <dl class="detail__podrobnosti">
           <dt class="detail__popisok">Rok:</dt>
           <dd> {{ film.rok }}</dd>
-          <dt class="film-detail__popisek">Země:</dt>
+          <dt class="detail__popisek">Země:</dt>
           <dd>{{ film.zeme }}</dd>
           <dt class="detail__popisok">Žánr:</dt>
           <dd> {{ film.zanr }} {{ film.zanr | join(' / ') }}</dd>
