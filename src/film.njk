@@ -9,14 +9,14 @@ permalink: "/film/{{ film.nazev | slug }}/"
 <div class="layout_telo">
   <div class="detail">
     <main class="detail__hlavni">
-      h2 class="hlavni-nadpis">{{ film.nazev }}</h2>
+      <h2 class="hlavni-nadpis">{{ film.nazev }}</h2>
         <dl class="detail__podrobnosti">
           <dt class="detail__popisok">Rok:</dt>
           <dd> {{ film.rok }}</dd>
           <dt class="film-detail__popisek">Země:</dt>
           <dd>{{ film.zeme }}</dd>
           <dt class="detail__popisok">Žánr:</dt>
-          <dd> {{ film.zanr }} {{ zanr | join }}</dd>
+          <dd> {{ film.zanr }} {{ film.zanr | join }}</dd>
           <dt class="detail__popisok">Délka:</dt>
           <dd> {{ film.delka }}minut</dd>
         </dl>
