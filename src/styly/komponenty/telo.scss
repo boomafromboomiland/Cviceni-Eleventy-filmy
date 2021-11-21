@@ -1,11 +1,13 @@
-.telo {
+.layout_telo {
     display: grid;
     grid-template-rows: auto 1fr auto;
+    max-width: $sirka-obsahu;
+	width: 100%;
+    padding: $mezera-od-okraju;
 }
 
 .hlavni-nadpis {
     font-size: 2rem;
-    /*margin-bottom: 0.5rem 0;*/
     margin-left: 150px;
 }
 
@@ -30,14 +32,14 @@
     } 
 }
 
-.layout_telo {
-    max-width: $sirka-obsahu;
-	width: 100%;
-    padding: $mezera-od-okraju;
-    margin-left: 150px;
-}
-
 .podnadpis {
     font-size: 1.6rem;
     margin: 0.9rem 0;
+}
+
+/* ---------MOBILE max.width 530px--------- */
+@media (max-width:530px) {
+    .hlavni-nadpis {
+        margin-left: 30px;
+    }
 }

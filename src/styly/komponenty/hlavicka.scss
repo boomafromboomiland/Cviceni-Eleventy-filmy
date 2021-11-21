@@ -2,10 +2,10 @@
 	background-color: $hlavni-barva;
 
 	&__obsah {
-		max-width: $sirka-obsahu;
-		width:100%;
+		max-width: 52rem;
+		width: 100%;
 		margin: 0 auto;
-		padding:$mezera-od-okraju;
+		padding: 1rem;
 	}
 
 	&__logo {

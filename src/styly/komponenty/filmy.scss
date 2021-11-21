@@ -1,3 +1,8 @@
+.detail {
+    display: grid;
+    gap: 0 2rem;
+}
+
 .detail__podrobnosti {
     margin: 0 0 1.8rem;
     display: grid;
@@ -9,18 +14,27 @@
     margin: 0;
     }
 
+.detail__podrobnosti dt {
+    font-weight: bold;
+}
+
 .detail__popisok {
     font-weight: 700;
     }
 
-.plakat {
-    width: 100%;
+.detail__plakat {
+    width: 192px;
     height: auto;
     max-width: 100%;
     }
 
-@media screen and (min-width:530px) {
-    .plakat {
+/* ---------MOBILE max.width 530px--------- */
+@media (max-width:530px) {
+    .detail {
+        grid-template-columns: 1fr 12rem;
+    }
+
+    .detail__plakat {
         display: grid;
         grid-template-columns: 1fr 13rem;
         gap: 2rem;

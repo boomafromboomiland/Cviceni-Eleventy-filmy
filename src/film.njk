@@ -14,11 +14,11 @@ permalink: "/film/{{ film.nazev | slug }}/"
           <dt class="detail__popisok">Rok:</dt>
           <dd> {{ film.rok }}</dd>
           <dt class="detail__popisek">Země:</dt>
-          <dd>{{ film.zeme }}</dd>
+          <dd>{{ film.zeme | join(', ')  }}</dd>
           <dt class="detail__popisok">Žánr:</dt>
-          <dd> {{ film.zanr }} {{ film.zanr | join(' / ') }}</dd>
+          <dd> {{ film.zanr | join(' / ') }}</dd>
           <dt class="detail__popisok">Délka:</dt>
-          <dd> {{ film.delka }}minut</dd>
+          <dd> {{ film.delka }} minut</dd>
         </dl>
       <h3 class="podnadpis">Obsah</h3>
       <p>{{ film.obsah.text }}
